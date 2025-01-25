@@ -22,12 +22,12 @@ A dynamic Quote Generator website that fetches random quotes via API and allows 
 
 1.) Clone the Repository: 
 ```
-git clone https://github.com/ankita34359/Quote-Generator-Website.git
+git clone https://github.com/Adwaitbytes/Quote-Generator-And-Pusher-Website
 ```
 
 2.) Navigate to the Project Directory:
 ```
-cd Quote-Generator-Website
+cd Quote-Generator-And-Pusher-Website
 ```
 
 3.) Open index.html in Your Preferred Web Browser:
