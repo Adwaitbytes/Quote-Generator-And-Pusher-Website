@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.9);
+    width: 700px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.quote-box h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: bold;
+    color: #333;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 75px;
+    height: 4px;
+    border-radius: 3px;
+    background: #176ced;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideIn 0.6s ease-out;
+}
+
+.quote-box blockquote {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #555;
+    min-height: 120px;
+    position: relative;
+}
+
+.quote-box blockquote::before {
+    content: '“';
+    font-size: 40px;
+    color: #176ced;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    opacity: 0.8;
+}
+
+.quote-box blockquote::after {
+    content: '”';
+    font-size: 40px;
+    color: #176ced;
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    opacity: 0.8;
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    float: right;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #176ced;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background: #176ced;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.quote-box button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(23, 124, 229, 0.4);
+}
+
+.quote-box button i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Optional second button style */
+/*
+.quote-box button:nth-child(2) {
+    background: transparent;
+    color: #333;
+    border: 2px solid #176ced;
+}
+
+.quote-box button:nth-child(2):hover {
+    background: #176ced;
+    color: #fff;
+}
+*/
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75px;
+    }
+}
